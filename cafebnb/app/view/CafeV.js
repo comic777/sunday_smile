@@ -13,12 +13,25 @@ Ext.define("cafe.view.CafeV", {
 		items:[{
 			xtype:"toolbar",
 			docked:"top",
-			title:"cafe_list"
+			
+			items:[{
+				xtype:"segmentedbutton",
+				padding:"0 35",
+				
+				items:[{
+					text:"Popular",
+					//flex:5,
+					width:120
+				},{
+					text:"Cafebnb picks",
+					width:120,
+				}]
+			}]
 		},{
 			xtype:"list",
 			store:"cafeS",
 			scroll:"vertical",
-			itemTpl: new Ext.Template(["<img src='{picture}.png' width='320', height='150'>",]),
+			itemTpl: new Ext.Template(["<img src='{picture}.png' width='300', height='150'>",]),
 			
 			emptyText:"데이터가 아직 없습니다",
 	}]
