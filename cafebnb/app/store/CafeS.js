@@ -4,7 +4,7 @@ Ext.define("cafe.store.CafeS", {
 
 	config:{
 		model:"cafe.model.CafeM",
-		storeId:"cafeS",
+		
 		
 		
 		data:[
