@@ -6,8 +6,8 @@ Ext.define("cafe.controller.CafeC", {
 		refs:{
 			mainView : "mainview",
 			cafeView :  "cafeview",
-			// cafeDataView : "cafedataview"
-			cafeDetailView: "cafedetailview"
+			cafeDetailView: "cafedetailview",
+			
 	},
 	control:{
 		"cafeview" : {
@@ -25,24 +25,49 @@ Ext.define("cafe.controller.CafeC", {
 	
 	onActivate:function(container, newActiveItem, oldActiveItem, opts){
 		var objStore = Ext.getStore("CafeS");
-		console.log(objStore);
+		
 		if(objStore.isLoaded()==false)
 			objStore.load();
 	},
 	
-	onItemTap:function(dataView, index, target, record){
-		// this.getCafeDetailView().setRecord(record);
+	onItemTap : function(dataView, index, target, record){
+		
+		// var store = Ext.getStore("CafeS");
+		// console.log(store);
 		// 
-		// this.getMainView().animateActiveItem(this.CafeDetailView());
-		console.log(dataView);
-		console.log(index);
-		console.log(record);
-		console.log(target);
-		Ext.Viewport.setActiveItem({
-			xtype:"cafedetailview"
+		// console.log(dataView);
 		
-		});
 		
+		
+		// var detail = Ext.create("cafe.view.CafeDetailV");
+		// console.log(detail);
+		// 
+		// var aa = detail.setRecord(record);
+		// 
+		// console.log("========");
+		// console.log(aa);
+		// 
+		// 
+		// Ext.Viewport.setActiveItem({
+		// 	xtype:"cafedetailview",
+		// 	// var aa = detail.setRecord(record);
+		// 	})
+		
+		
+		
+					
+		
+		this.getCafeDetailView().setRecord(record);
+		this.getCafeView().animateActiveItem(this.getCafeDetailView(), {type:"slide", direction:"left", duration:300});
+		
+		
+		
+		// console.log(Ext.getStore("CafeS").data.items[index].data.name);
+		
+		
+		
+		
+
 	}
 	
 	

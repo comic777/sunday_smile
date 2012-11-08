@@ -2,27 +2,28 @@ Ext.define("cafe.view.CafeDetailV", {
 	extend:"Ext.Panel",
 	xtype:"cafedetailview",
 	
+	
 	config:{
 		
-		layout:"fit",
-			scrollable:"vertical",
-			
-			
-			
+		layout:"card",		
+		
+		
+		scroll:"vertical",
+		tpl: '<div><img src="{picture}.png" width="70%"><br>{name}</div>',	
+		emptyText:"데이터가 아직 없습니다",						
+		
+		
+		items:[{
+			xtype:"toolbar",
+			docked:"top",
+			title:"cafedetail",
 			items:[{
-				xtype:"toolbar",
-				docked:"top",
-				title:"Detail",
-				items:[{
-					xtype:"button",
-					text:"back",
-					ui:"back",
-					itemId:"btn_back"
-				}]
-			},{
-				itemTpl:"<div style=\"background:url('{picture}.png'); width:300px ;height:180px;text-align:center\"><div style=\"padding: 155px 0px 2px 180px;\"><font color=white>{name}</font></div></div>"
+				xtype:"button",
+				text:"back",
+				ui:"back",
+				itemId:"btn_back"
 			}]
-
+		}]	
 
 	}
 	

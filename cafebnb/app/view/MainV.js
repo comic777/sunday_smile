@@ -5,7 +5,7 @@ Ext.define("cafe.view.MainV", {
 	
 	config:{
 		
-		
+		layout:"card",
 		tabBar:{
 			docked:"bottom"
 		},
@@ -13,8 +13,10 @@ Ext.define("cafe.view.MainV", {
 		
 		items:[{
 			xtype:"cafeview",
+			id:"cafe_detail_view",
 			title:"Featured",
-			iconCls:"favorites"
+			iconCls:"favorites",
+			
 		},{
 			xtype:"searchview",
 			title:"Search",
