@@ -8,6 +8,7 @@ Ext.define('Cafebnb.controller.Featureds', {
 			featuredContainer: 'featuredContainer',
 			featuredSpeakers: 'featuredContainer list',
 			featuredInfo: 'featuredContainer featuredInfo',
+			featuredInfa: 'featuredContainer featuredInfa',
 			sessions: 'featuredContainer featured list'
 		},
 		control: {
@@ -21,14 +22,34 @@ Ext.define('Cafebnb.controller.Featureds', {
 
 	
 	onSessionTap: function(list, idx, el, record) {
-
-		if (!this.featuredInfo) {
-			this.featuredInfo = Ext.widget('featuredInfo');
+		
+		// var featuredStore = Ext.getStore('Featureds'),
+		// 	featuredIds = record.get('featuredIds');
+		
+		// featuredStore.clearFilter();
+		// featuredStore.filterBy(function(session) {
+		// 	return Ext.Array.contains(sessionIds, session.get('id'));
+		// });
+		
+		if (!this.featured) {
+			this.featured = Ext.widget('featured');
 		}
-
-		this.featuredInfo.config.title = record.get('name');
-		this.featuredInfo.setRecord(record);
-		this.getFeaturedContainer().push(this.featuredInfo);
+		
+		this.featured.config.title = record.get('name');
+		this.getFeaturedContainer().push(this.featured);
+		this.getFeaturedInfo().setRecord(record);
+		
+		this.getFeaturedInfa().setRecord(record);
+		
+		// 
+		// if (!this.featured) {
+		// 	this.featured = Ext.widget('featured');
+		// }
+		// 
+		// this.featured.config.title = record.get('name');
+		// this.featured.setRecord(record);
+		// 
+		// this.getFeaturedContainer().push(this.featured);
 	},
 	
 

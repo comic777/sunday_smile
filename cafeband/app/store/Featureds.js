@@ -9,9 +9,9 @@ Ext.define('Cafebnb.store.Featureds', {
 		
 		
 		data:[
-		{picture : "cafe1", name: "gongringa", price:"5000won"},
-		{picture : "cafe2", name: "culcom", price:"4000won"},
-		{picture : "cafe3", name: "choi", price:"6000won"},
+		{picture : "cafe1", name: "gongringa", price:"cafe1_1"},
+		{picture : "cafe2", name: "culcom", price:"cafe2_1"},
+		{picture : "cafe3", name: "choi", price:"cafe3_1"},
 		],
 		
 		

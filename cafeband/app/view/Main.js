@@ -11,7 +11,7 @@ Ext.define('Cafebnb.view.Main', {
 		},
 
 		items: [
-			{ xclass: 'Cafebnb.view.Featured.Card' },
+			{ xclass: 'Cafebnb.view.Featured.Card'},
 			{ xclass: 'Cafebnb.view.Search.Card' },
 			{ xclass: 'Cafebnb.view.Host.Card'   },
 			{ xclass: 'Cafebnb.view.Account.Card' },

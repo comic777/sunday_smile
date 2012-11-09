@@ -28,6 +28,7 @@ Ext.application({
 		"Featured.List",
 		"Featured.Detail",
 		"Featured.Info",
+		"Featured.Infa",
 		
 		
 		"Search.Card",

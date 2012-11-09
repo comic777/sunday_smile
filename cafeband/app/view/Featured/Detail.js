@@ -8,10 +8,17 @@ Ext.define('Cafebnb.view.Featured.Detail', {
 		layout: 'vbox',
 		items: [
 			{
-				flex: 1,
+				flex: 2,
 				//scrollable: 'vertical',
-				xtype: 'featuredInfo'
+				// xtype: 'featuredInfo'
 				//html:"<image src='cafe1.png'>",
+				xtype:"carousel",
+				
+				items:[{
+					xtype:"featuredInfo"
+				},{
+					xtype:"featuredInfa"
+				}]
 			},
 			{
 				flex: 2,
