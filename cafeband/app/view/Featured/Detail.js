@@ -6,14 +6,18 @@ Ext.define('Cafebnb.view.Featured.Detail', {
 	config: {
 
 		layout: 'vbox',
+		
+		scrollable: 'vertical',
+		directionLock:true,
+		
 		items: [
 			{
-				flex: 2,
+				flex: 3,
 				//scrollable: 'vertical',
 				// xtype: 'featuredInfo'
 				//html:"<image src='cafe1.png'>",
 				xtype:"carousel",
-				
+				directionLock:true,
 				items:[{
 					xtype:"featuredInfo"
 				},{
@@ -21,10 +25,28 @@ Ext.define('Cafebnb.view.Featured.Detail', {
 				}]
 			},
 			{
-				flex: 2,
-				xtype: 'list',
-				// store: 'SpeakerSessions',
+				flex:1,
+				layout:"hbox",
+				items:[{xtype:"spacer"},{
+					xtype:"button",
+					text:"Book It",	
+					width:150,
+					height:20,
+					ui:"confirm"
+				},{xtype:"spacer"},{
+					xtype:"button",
+					text:"Contact Host",
+					width:150,
+					height:20,
+					ui:"action"
+				},{xtype:"spacer"}]
 				
+			},{
+			
+				xtype:"panel",
+				html:"Description<br>Property Details<br>Amenities"
+			},{
+				xtype:"map"
 			}
 		]
 

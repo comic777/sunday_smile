@@ -50,6 +50,7 @@ Ext.define('Cafebnb.controller.Featureds', {
 		// this.featured.setRecord(record);
 		// 
 		// this.getFeaturedContainer().push(this.featured);
+		this.featured.init;
 	},
 	
 
