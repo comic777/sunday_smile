@@ -10,7 +10,7 @@ Ext.define('Cafebnb.view.Featured.List', {
 		
 
 		itemTpl: [
-			"<div style=\"background:url('{picture}.png'); width:300px ;height:180px;text-align:center\"><div style=\"padding: 155px 0px 2px 180px;\"><font color=white>{name}</font></div></div>"
+			"<div style=\"background:url('img/{picture}.png'); width:300px ;height:180px;text-align:center\"><div style=\"padding: 155px 0px 2px 180px;\"><font color=white>{name}</font></div></div>"
 			
 			
 		]

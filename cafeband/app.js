@@ -29,7 +29,7 @@ Ext.application({
 		"Featured.Detail",
 		"Featured.Info",
 		"Featured.Infa",
-		
+		"Featured.Maplist",
 		
 		"Search.Card",
 		
