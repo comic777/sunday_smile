@@ -1,0 +1,311 @@
+@charset "UTF-8";html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+	margin:0; padding:0;
+	border:0;
+	font:inherit; font-size:100%;
+	vertical-align:baseline
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display:block}
+body {line-height:1}
+ol,ul {list-style:none}
+blockquote,q {quotes:none}
+blockquote:before,blockquote:after,q:before,q:after {content:''; content:none}
+table {border-collapse:collapse; border-spacing:0}
+input,img {vertical-align:middle}
+body,input,textarea {font:12px NanumGothic, "나눔고딕", sans-serif}
+body#main,body#list {
+	background:url(/resources/image/bg_stripes.png) repeat
+}
+::selection {background-color:#2098E4; color:white}
+::-moz-selection {background-color:#2098E4; color:white}
+b,strong {font-weight:bolder}
+a {color:#000; text-decoration:none}
+.clear {clear:both}
+.btn {
+	display:block;
+	outline:none;
+	font-size:1px; text-indent:-9999px;
+	border:0 none
+}
+a.block {display:block; text-decoration:none}
+.clearfix:after {
+	display:block; visibility:hidden; clear:both;
+	content:"."; line-height:0;
+	height:0
+}
+.c-button-blue {
+	padding:8px 12px;
+	border:1px solid #1668a8; border-radius:2px; background:#31a9ec; background-image:linear-gradient(bottom, #2099e4 3%, #46bff7 100%); background-image:-o-linear-gradient(bottom, #2099e4 3%, #46bff7 100%); background-image:-moz-linear-gradient(bottom, #2099e4 3%, #46bff7 100%); background-image:-webkit-linear-gradient(bottom, #2099e4 3%, #46bff7 100%); background-image:-ms-linear-gradient(bottom, #2099e4 3%, #46bff7 100%); background-image:-webkit-gradient(linear, left bottom, left top, color-stop(0.03, #2099e4), color-stop(1, #46bff7));
+	color:#fff; font-weight:bolder; text-decoration:none; text-shadow:0 1px 1px rgba(0,0,0,0.3);
+	box-shadow:inset 0 1px 0 rgba(255,255,255,0.3),0 1px 2px rgba(0,0,0,0.3)
+}
+.c-button-blue:hover {
+	border-color:#043a5f;
+	box-shadow:inset 0 2px 2px rgba(255,255,255,0.5),0 1px 2px rgba(0,0,0,0.3)
+}
+.c-button-white {
+	padding:8px 12px;
+	border:1px solid #aaa; border-radius:2px; background:#f3f3f3;
+	color:#333; font-weight:bolder; text-decoration:none; text-shadow:0 1px 1px rgba(0,0,0,0.3);
+	box-shadow:inset 0 1px 0 rgba(255,255,255,0.5),0 1px 2px rgba(0,0,0,0.3)
+}
+.c-button-white:hover {
+	border-color:#888;
+	box-shadow:inset 0 2px 2px rgba(255,255,255,0.5),0 1px 2px rgba(0,0,0,0.3)
+}
+.city-name {
+	padding:6px 12px 6px 26px;
+	border-radius:30px; background:url(/resources/image/icon_city_pin.png) no-repeat 9px 4px;
+	font-weight:bolder; font-family:Helvetica, sans-serif;
+	font-size:12px
+}
+.city-name.cn-black {
+	position:relative; top:-5px;
+	background-color:#000; box-shadow:0 0 0 2px rgba(255,255,255,0.3);
+	color:#fff;
+	background-clip:padding-box
+}
+.city-name.cn-white {border:1px solid #ddd; color:#333; background-color:#fff}
+#Header {
+	position:absolute; top:0; left:0;
+	width:100%; height:70px;
+	background:#a70b32; box-shadow:0 0 10px rgba(0,0,0,0.5);
+	z-index:5
+}
+#Header .header-wrap {width:980px; margin:0 auto; position:relative}
+
+#Header .region {
+	float:left;
+	width:400px; height:60px;
+	background:url(http://f0.myrealtrip.com/assets/bg_header-d9500e9f8c28332acb3de7223d58d8f8.png) no-repeat;
+	padding-top:10px
+}
+#Header .region li {float:left}
+#Header .region li a {
+	height:48px;
+	border:1px solid transparent; background:url(http://f2.myrealtrip.com/assets/header_region_sprites-026da79eae85be3e7071cd524df9f3d6.png) no-repeat;
+	-webkit-transition:all .2s
+}
+
+#Header .region li.europe a {background-position:0 0; width:94px}
+#Header .region li.asia a {background-position:-98px 0; width:80px}
+#Header .region li.america a {background-position:-182px 0; width:104px}
+#Header .region li.europe {margin-right:3px}
+#Header .region li.asia {margin-right:24px}
+#Header .region li.europe.selected a {background-position:0 -48px}
+#Header .region li.asia.selected a {background-position:-98px -48px}
+#Header .region li.america.selected a {background-position:-182px -48px}
+#Header .region li a:hover {
+	border:1px solid #aaa; border-radius:4px;
+	background-color:rgba(255,255,255,0.3)
+}
+#Header h1 {position:absolute; left:445px; top:20px}
+#Header h1 a {
+	width:74px; height:34px;
+	color:#fff; font-family:Helvetica, Tahoma, sans-serif;
+	font-weight:bolder; font-size: 2.3em;
+}
+#Header .private-tour {float:right; margin:18px 0 0}
+#Header .become-guide {float:right; margin:18px 8px 0}
+#Header .learn-more {float:right; margin:18px 0 0}
+#Header .choose-language {float:right; margin:25px 15px 0 0}
+#Header .choose-language .label {
+	float:left;
+	margin:2px 8px 0 0;
+	color:#888; font-family:Helvetica, Tahoma, sans-serif;
+	font-weight:bolder
+}
+#Header .choose-language .language {
+	float:left;
+	margin:-5px 0 0 0;
+	background:#fff;
+	border:1px solid transparent
+}
+#Header .choose-language .language li {float:left}
+#Header .choose-language .language li a {display:block; padding:4px 6px}
+#Header .choose-language .language li.selected {
+	margin-top:-5px; padding-top:5px;
+	background:url(http://f0.myrealtrip.com/assets/bullet_selected-1a0b427fa5cbb54317de9d410511acdd.png) no-repeat center top
+}
+#Header .inbound-categories {float:left; font-family:'Enriqueta', sans-serif}
+#Header .inbound-categories .category-btn {
+	position:relative; float:left;
+	width:130px; margin:0 30px 0 0; padding-top:16px;
+	border-top:4px solid #ccc;
+	cursor:pointer;
+	height:50px
+}
+#Header .inbound-categories .category-btn:hover {border-color:#31a9ec}
+#Header .inbound-categories .category-btn i {
+	float:left;
+	width:20px; height:20px;
+	background:url(http://f1.myrealtrip.com/assets/header_inbound_sprites-08dc68b275da87ae82441f66d5b9f347.png) no-repeat;
+	margin-right:4px
+}
+#Header .inbound-categories .category-btn i.location {background-position:0 0}
+#Header .inbound-categories .category-btn i.themes {background-position:-20px 0}
+#Header .inbound-categories .category-btn strong {
+	display:block;
+	padding:0 20px 0 0;
+	font-size:15px; font-weight:700;
+	background:url(http://f1.myrealtrip.com/assets/header_inbound_sprites-08dc68b275da87ae82441f66d5b9f347.png) no-repeat right 0
+}
+#Header .inbound-categories .category-btn span {display:block; margin-left:24px; font-style:italic; font-size:11px}
+#Header .inbound-categories .categories {
+	display:none; position:absolute; top:60px; left:0;
+	padding:4px 0;
+	border-radius:4px; background:#000; box-shadow:0 2px 4px rgba(0,0,0,0.5);
+	width:130px
+}
+#Header .inbound-categories .category-btn:hover .categories,#Header .inbound-categories .category-btn:hover .categories:hover {display:block}
+#Header .inbound-categories .categories li {border-bottom:1px solid #333}
+#Header .inbound-categories .categories li:last-child {border-bottom:0 none}
+#Header .inbound-categories .categories li a {display:block; color:#aaa; padding:5px 8px}
+#Header .inbound-categories .categories li a:hover {background:#111; color:#fff; border-color:#444}
+.trip-list {width:980px; margin:0 auto 40px}
+.trip-list li {
+	position:relative; float:left;
+	margin-right:20px;
+	box-shadow:0 1px 3px rgba(0,0,0,0.4);
+	-webkit-transition:box-shadow .3s
+}
+.trip-list li:hover {box-shadow:0 1px 12px rgba(0,0,0,0.7)}
+.trip-list li.last {margin-right:0}
+.tl-2col li {width:480px}
+.tl-4col li {width:230px}
+.trip-list .meta-info-area {background:#fff; position:relative}
+.trip-list .image-area {position:relative; overflow:hidden}
+.trip-list .image-area img {width:100%}
+.tl-2col .image-area {width:480px; height:313px}
+.tl-2col .meta-info {padding:15px 8px 15px 20px}
+.tl-2col .meta-info .title {
+	width:320px; padding-bottom:6px; overflow:hidden;
+	color:#000; font-size:18px; font-weight:bolder; text-overflow:ellipsis; line-height:20px;
+	letter-spacing:-1px;white-space:nowrap
+}
+.tl-2col .meta-info .desc {
+	width:320px; overflow:hidden;
+	color:#2098e4; font-size:12px; text-overflow:ellipsis; line-height:18px;
+	white-space:nowrap
+}
+.tl-2col .meta-info-area .city-name {position:absolute; right:10px; top:22px}
+.tl-4col .image-area {width:230px; height:152px}
+.tl-4col .city-name-box {
+	position:absolute; top:0; left:0;
+	width:230px; height:42px; padding-top:112px;
+	text-align:center
+}
+.tl-4col .city-name {display:inline-block; margin:10px}
+.tl-4col .meta-info {padding:10px 0}
+.tl-4col .meta-info .title {
+	overflow:hidden;
+	color:#000; font-size:14px; font-weight:bolder; text-align:center; text-overflow:ellipsis; line-height:20px; white-space:nowrap;
+	letter-spacing:-1px;margin:0 15px
+}
+.guide-info {position:absolute; right:0; bottom:0; margin:0 0 18px; z-index:2}
+.guide-info .photo-box {
+	float:left;
+	border:3px solid #fff; border-radius:64px;
+	color:#fff;
+	box-shadow:inset 0 1px 10px rgba(0,0,0,0.5),0 1px 3px rgba(0,0,0,0.5)
+}
+.guide-info .photo-box img {position:relative; float:left; width:48px; border-radius:64px; z-index:-1}
+.guide-info .guide-box {float:left; padding:5px 15px 0 10px; width:100px}
+.guide-info .guide-name {
+	margin-bottom:8px;
+	color:#fff; font-size:14px; font-weight:bolder;
+	display:block
+}
+.guide-info .guide-desc {position:absolute; color:#b8b8b8; font-size:12px; display:block}
+.fader {
+	position:absolute; left:0; bottom:0;
+	width:100%; height:162px;
+	background:url(http://f3.myrealtrip.com/assets/fader_large-c5000ae923f3ee9c006c1f828d58dab3.png) repeat-x;
+	z-index:1
+}
+#Footer {padding:30px 0 0; background:#000; margin-top:100px}
+#Footer .footer-wrap {width:980px; margin:0 auto}
+#Footer .f-left {float:left; width:200px}
+#Footer .f-middle {float:left; width:470px}
+#Footer .f-right {float:left; width:310px}
+#Footer .logo {
+	width:72px; height:60px;
+	background:url(http://f3.myrealtrip.com/assets/logo_footer-e627eb7719256d43db485e08c3361ccf.png) no-repeat;
+	margin-left:15px
+}
+#Footer .etc-links {padding-top:20px}
+#Footer .etc-links a {
+	display:block;
+	padding-left:15px;
+	background:url(http://f0.myrealtrip.com/assets/bullet_1-b4eb1ff68cf7dca8afe18d0c1006b34a.png) no-repeat 0 center;
+	color:#808080; text-decoration:none; line-height:24px;
+	-webkit-transition:color .2s
+}
+#Footer .etc-links a:hover {text-decoration:underline; color:#fff}
+#Footer .mailinglist {padding-bottom:20px}
+#Footer .mailinglist strong {
+	display:block;
+	padding-bottom:4px;
+	font-size:14px; font-weight:bolder;
+	color:#fff
+}
+#Footer .mailinglist span {display:block; color:#808080; font-size:12px; padding-bottom:12px}
+#Footer .mailinglist .text {
+	width:200px; padding:8px;
+	border-radius:3px; background:#fff; box-shadow:inset 0 1px 3px rgba(0,0,0,0.2);
+	border:0 none
+}
+#Footer .blog-title a {
+	padding-bottom:10px;
+	color:#fff; font-size:14px; font-weight:bolder;
+	display:block
+}
+#Footer .blog-articles a {color:#808080; line-height:24px; -webkit-transition:color .2s}
+#Footer .blog-articles a:hover {text-decoration:underline; color:#fff}
+#Footer .copyright {
+	margin-top:30px; padding:10px 0 20px;
+	border-top:1px solid #555;
+	text-align:center;
+	color:#808080
+}
+.tipsy {position:absolute; padding:5px; font-size:11px; z-index:100000}
+.tipsy-inner {
+	max-width:200px; padding:5px 8px 4px 8px;
+	background-color:black;
+	color:white;
+	text-align:center
+}
+.tipsy-inner {border-radius:3px; -webkit-border-radius:3px-moz-border-radius:3px;}
+.tipsy-arrow {
+	position:absolute;
+	width:9px;
+	background:url(http://f0.myrealtrip.com/assets/tipsy-e2056c00fbfb2441d218819b922c4944.gif) no-repeat top left;
+	height:5px
+}
+.tipsy-n .tipsy-arrow {top:0; left:50%; margin-left:-4px}
+.tipsy-nw .tipsy-arrow {top:0; left:10px}
+.tipsy-ne .tipsy-arrow {top:0; right:10px}
+.tipsy-s .tipsy-arrow {
+	left:50%; bottom:0;
+	margin-left:-4px;
+	background-position:bottom left
+}
+.tipsy-sw .tipsy-arrow {left:10px; bottom:0; background-position:bottom left}
+.tipsy-se .tipsy-arrow {right:10px; bottom:0; background-position:bottom left}
+.tipsy-e .tipsy-arrow {
+	top:50%; right:0;
+	width:5px; height:9px; margin-top:-4px;
+	background-position:top right
+}
+.tipsy-w .tipsy-arrow {top:50%; left:0; width:5px; margin-top:-4px; height:9px}
+.placeholder {color:#777}
+.see-more-button {
+	display:block; position:relative; top:15px;
+	margin:0 15px 15px; padding:15px 0;
+	border:1px solid #aaa; border-radius:3px; background-image:linear-gradient(bottom, #f0f0f0 2%, #ededed 44%, #f5f5f5 76%); background-image:-o-linear-gradient(bottom, #f0f0f0 2%, #ededed 44%, #f5f5f5 76%); background-image:-moz-linear-gradient(bottom, #f0f0f0 2%, #ededed 44%, #f5f5f5 76%); background-image:-webkit-linear-gradient(bottom, #f0f0f0 2%, #ededed 44%, #f5f5f5 76%); background-image:-ms-linear-gradient(bottom, #f0f0f0 2%, #ededed 44%, #f5f5f5 76%); box-shadow:0 1px 3px rgba(0,0,0,0.2);
+	background-image:-webkit-gradient(linear, left bottom, left top, color-stop(0.02, #f0f0f0), color-stop(0.44, #ededed), color-stop(0.76, #f5f5f5))
+}
+.see-more-button:hover {border-color:#555}
+.see-more-button span {display:block; width:76px; height:19px; margin:0 auto}
+label.error {color:#ff5555}
+.ellipsis {white-space:nowrap; overflow:hidden}
+.ellipsis.multiline {white-space:normal}

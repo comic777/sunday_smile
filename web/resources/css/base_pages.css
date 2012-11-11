@@ -1,0 +1,486 @@
+.featured-trip {position:relative; height:580px; overflow:hidden}
+.featured-trip .ft-wrap {position:relative; width:980px; height:580px; margin:0 auto; z-index:2}
+.featured-trip .ft-meta-info {
+	position:absolute; z-index:2; left:0; bottom:0;
+	padding:0 0 20px;
+	max-width:750px
+}
+.featured-trip .ft-meta-info .title {
+	padding-bottom:6px;
+	color:#fff; font-size:28px; font-weight:bolder;
+	text-shadow:0 1px 2px rgba(0,0,0,0.7)
+}
+.featured-trip .ft-meta-info .desc {color:#fff; font-size:14px; text-shadow:0 1px 2px rgba(0,0,0,0.7)}
+.featured-trip .ft-guide-info .photo-box img {width:78px; height:78px}
+.featured-trip .ft-guide-info .guide-box {padding:15px 15px 0 10px}
+.featured-trip .ft-image {position:absolute; z-index:0; top:0; left:0; width:100%}
+.featured-trip .ft-image img {width:100%; min-width:1600px; min-height:580px}
+.featured-trip .ft-navi {
+	position:absolute; top:0; left:0;
+	width:100%; height:580px;
+	z-index:1
+}
+.featured-trip .ft-navi .fader-left,.featured-trip .ft-navi .fader-right {
+	display:block; position:absolute; top:0;
+	width:211px; height:580px;
+	background:url(http://f2.myrealtrip.com/assets/fader_ft_navi-f9fd33c2ade7094f47ec4c6022a5ca74.png) repeat-y;
+	-webkit-transition:opacity .3s
+}
+.featured-trip .ft-navi .fader-left {left:0; background-position:left top}
+.featured-trip .ft-navi .fader-right {right:0; background-position:right top}
+.featured-trip .ft-navi .fader-left,.featured-trip .ft-navi .fader-right {opacity:.2; filter:alpha(opacity=20)}
+.featured-trip:hover .ft-navi .fader-left,.featured-trip:hover .ft-navi .fader-right {opacity:.7; filter:alpha(opacity=70)}
+.featured-trip .ft-navi .fader-left:hover,.featured-trip .ft-navi .fader-right:hover {opacity:1; filter:alpha(opacity=100)}
+.featured-trip .ft-navi .ft-prev,.featured-trip .ft-navi .ft-next {
+	display:block; position:absolute; top:340px;
+	width:33px;
+	background:url(http://f3.myrealtrip.com/assets/btn_ft_navi-e251703f75a49f5feab0319d10921847.png) no-repeat;
+	height:33px
+}
+.featured-trip .ft-navi .ft-prev {background-position:0 0; left:20px}
+.featured-trip .ft-navi .ft-next {background-position:0 -50px; right:20px}
+.banner-area {position:absolute; top:30px; width:806px; margin:30px auto 0; left:50px}
+.banner-area .banner-wrap {
+	position:relative;
+	height:120px;
+	background:url(http://f2.myrealtrip.com/assets/banner_learnmore-2cf5b743efbad942c04d2c7347a0de05.png) no-repeat;
+	z-index:4
+}
+.banner-area .close-banner {
+	position:absolute; z-index:5; top:17px; right:16px;
+	width:20px; height:20px;
+	background:none;
+	cursor:pointer
+}
+.banner-area .open-banner {
+	position:absolute; top:85px; right:16px;
+	width:192px; height:24px;
+	background:url(http://f0.myrealtrip.com/assets/btn_open_banner-ea1a7b0b209e0abd1b6c838a4a2f7c52.png) no-repeat;
+	cursor:pointer;
+	z-index:3
+}
+.banner-area .learn-more {
+	position:absolute; top:70px; right:77px;
+	width:108px; height:26px;
+	z-index:5
+}
+.banner-area.ba-closed {top:-75px}
+.banner-area.ba-closed .open-banner {top:125px}
+.press-logos {text-align:center}
+.press-logos a {margin-right:40px}
+.about-guide-box {
+	width:980px; margin:60px auto 0; padding:30px 0;
+	border-radius:4px; background:#fff; box-shadow:0 1px 3px rgba(0,0,0,0.4);
+	text-align:center
+}
+.about-guide-box span {
+	padding-top:4px; padding-right:20px;
+	color:#555; font-size:20px;
+	letter-spacing:-1px;display:inline-block
+}
+.about-guide-box .about_guide {
+	display:inline-block;
+	width:142px; height:34px;
+	background:url(http://f3.myrealtrip.com/assets/btn_how_to_guide-952f6adf43d1c004cebd3ecb0d5b279a.png) no-repeat;
+	vertical-align:top
+}
+h2.main-sub-title {
+	height:54px; margin:50px auto 30px;
+	background:url(/resources/image/tit_main_sub_sprites.png) no-repeat;
+	text-indent:-9999px;
+	width:440px
+}
+h2.main-sub-title.mst-popular {background-position:0 0}
+h2.main-sub-title.mst-recent {background-position:0 -80px; margin-top:70px}
+h2.main-sub-title.mst-press {width:480px; margin-top:80px; background-position:0 -160px; height:26px}
+.title-type-a {
+	background:url(http://f0.myrealtrip.com/assets/bg_sky-6185ef3607735ae6491ed5794a028b4e.jpg) repeat-x
+}
+.title-type-a .wrap {
+	height:200px;
+	background:url(http://f2.myrealtrip.com/assets/bg_clouds-661dc1b79494000b97b559a3476e182e.jpg) no-repeat center top;
+	padding-top:110px
+}
+.title-type-a h1 {height:70px; margin:0 auto; text-indent:-9999px}
+.title-type-a h1.become-guide {
+	width:223px;
+	background:url(http://f3.myrealtrip.com/assets/title_become_guide-01eaeb545f015321b3560ac0cd110cd3.png) no-repeat
+}
+.full-content {
+	position:relative;
+	width:980px; margin:-100px auto 0;
+	border-radius:4px; background:#fff; box-shadow:0 1px 2px rgba(0,0,0,0.3);
+	z-index:1
+}
+.become-guide-top {
+	height:338px;
+	border-bottom:1px solid #c2ced6; background:url(http://f2.myrealtrip.com/assets/bg_guide_top-653324db53f1cae73e802ec9ec1abd79.jpg) no-repeat;
+	position:relative
+}
+.become-guide-top .other-guides .og-wrap {position:absolute; left:0; bottom:0}
+.become-guide-top .other-guides .guide-photo-1 {margin-left:85px}
+.become-guide-top .other-guides .other-guide-info{
+	position:absolute; left:42px; bottom:20px;
+	border:2px solid #333; border-radius:3px; background:white; background:rgba(255,255,255,0.9); box-shadow:0 1px 2px rgba(0,0,0,0.3);
+	padding:8px 12px
+}
+.become-guide-top .other-guides .other-guide-info strong {
+	padding-bottom:4px;
+	color:#000; font-size:16px; font-weight:bolder;
+	display:block
+}
+.become-guide-top .other-guides .other-guide-info span {display:block; color:#777; font-size:11px}
+.become-guide-top .other-guides .pagination {position:absolute; left:20px; bottom:150px}
+.become-guide-top .other-guides .pagination li {float:left; text-indent:-9999px}
+.become-guide-top .other-guides .pagination li a {
+	display:block;
+	width:13px; height:13px;
+	background:url(http://f2.myrealtrip.com/assets/pagination_dot-774a60cf9698ac2566292bd17286946c.png) no-repeat; opacity:.3;
+	filter:alpha(opacity=50)
+}
+.become-guide-top .other-guides .pagination li.selected a {opacity:1; filter:alpha(opacity=100)}
+.become-guide-top .become-guide-desc {
+	position:absolute; left:450px;
+	width:457px; height:145px;
+	background:url(http://f2.myrealtrip.com/assets/guide_desc-30dcb21107c521785494cfd28f9c0e77.png) no-repeat;
+	text-indent:-9999px;
+	top:50px
+}
+.b-g-btn {
+	background:url(http://f3.myrealtrip.com/assets/btn_become_guide_sprites-cb308f358c5e2c4d39bd91308e493b2c.png) no-repeat
+}
+.become-guide-top .become-guide-btn-1 {
+	position:absolute; top:225px; left:450px;
+	width:157px; height:50px;
+	background-position:0 0
+}
+.fc-become-guide h2 {
+	height:30px;
+	background:url(http://f0.myrealtrip.com/assets/guide_title_sprites-8231ccd8dfb868def60a25eba3133e41.png) no-repeat;
+	text-indent:-9999px
+}
+.fc-become-guide h2.guide-features {background-position:center 0}
+.fc-become-guide h2.guide-procedure {background-position:center -30px}
+.fc-become-guide h2.guide-inquiry {background-position:center -60px}
+.box-separator {
+	background:url(http://f1.myrealtrip.com/assets/separator_1-fc0a84a17bfdfe81b40c686c1f5f7b01.png) repeat-x left bottom;
+	padding-bottom:40px
+}
+.become-guide-features {padding:50px 0}
+.become-guide-features .features {
+	width:778px; height:187px;
+	background:url(http://f0.myrealtrip.com/assets/guide_features-1017e81a3343ecff6e014c9c26c9e851.png) no-repeat;
+	margin:50px auto
+}
+.become-guide-features .features li {display:none}
+.become-guide-procedure {padding:50px 0}
+.become-guide-procedure .procedure {
+	width:980px; height:224px;
+	background:url(http://f1.myrealtrip.com/assets/guide_procedure-912e26a0b442aacbb21d4acf485a4b24.png) no-repeat;
+	margin:50px auto
+}
+.become-guide-procedure .procedure dt,.become-guide-procedure .procedure dd {display:none}
+.become-guide-inquiry {padding:50px 0}
+.become-guide-inquiry .inquiry-links {text-align:center; padding:20px 0 40px}
+.light-blue-btn {
+	display:inline-block;
+	margin-right:4px; padding:8px 16px;
+	border-radius:20px; outline:none; background:#3aa7de;
+	color:#fff; font-size:12px; font-weight:bolder;
+	border:0 none
+}
+.light-blue-btn:hover {background:#008ed5}
+.become-guide-inquiry .become-guide-btn-2 {
+	width:217px; height:60px; margin:20px auto 0;
+	background-position:0 -60px
+}
+.procedure-indicator {
+	height:75px; padding-top:25px;
+	background:url(http://f3.myrealtrip.com/assets/bg_guide_procedure-0d694dfbb2aa27f121c363be60a95f6f.png) repeat-x left bottom;
+	margin-bottom:50px
+}
+.procedure-indicator .pi-inner {
+	width:486px; height:60px; margin:0 auto;
+	background:url(http://f2.myrealtrip.com/assets/become_guide_procedure_sprites-e028aaf6d21534cb6537aab827773f5e.png) no-repeat
+}
+.procedure-indicator .pi-step1 {background-position:0 0}
+.procedure-indicator .pi-step2 {background-position:0 -60px}
+.procedure-indicator .pi-step3 {background-position:0 -120px}
+.procedure-indicator .pi-step4 {background-position:0 -180px}
+.procedure-indicator .pi-inner li {display:none}
+.fc-become-guide h2.procedure-step1 {background-position:center -90px}
+.fc-become-guide h2.procedure-step2 {background-position:center -120px}
+.fc-become-guide h2.procedure-step3 {background-position:center -150px}
+.fc-become-guide h2.procedure-step4 {background-position:center -180px}
+.form-well {
+	width:480px; padding:30px 50px;
+	border:4px solid #d2e8f3; border-radius:5px; background:#e7f3f9;
+	margin:30px auto
+}
+.form-well .form-box {padding:0 0 10px}
+.form-well .form-box dfn {
+	display:block;
+	color:#008ed5; font-style:normal; font-size:14px; font-weight:bolder;
+	padding:5px 5px 10px
+}
+.form-well .form-box span {padding-left:6px; color:#7fc6ea; font-size:12px; font-weight:normal}
+.form-well .form-box span.full {display:block; margin-bottom:5px}
+.form-well .form-box span.full2 {
+	display:block;
+	font-size:13px; line-height:150%;
+	margin-bottom:15px
+}
+.form-well .form-box span.gray {float:left; padding:0; color:#555; margin:9px 5px 0 0}
+.form-well .form-box span.bold {
+	float:right;
+	color:#008ed5; font-size:14px; font-weight:bolder;
+	margin-top:8px
+}
+.form-well .form-box select {padding:4px}
+.form-well .form-box .text {
+	margin-bottom:4px; padding:8px;
+	border:1px solid #bacfe0; border-radius:4px; outline:none; background:#fff; box-shadow:inset 0 1px 3px #e4eff8;
+	line-height:1
+	-webkit-transition:all .2s;
+}
+.form-well .form-box textarea.text {line-height:1.5}
+.form-well .form-box .text:focus {border-color:#6294bd; box-shadow:0 0 5px rgba(48,163,221,0.5)}
+.form-well .form-box .span1 {width:95%}
+.form-well .form-box .span2 {float:left; width:45%; margin-right:8px}
+.form-well .form-box .span3 {float:left; width:27%; margin-right:8px}
+.form-well .form-box .span4 {float:left; width:18%; margin-right:8px}
+.form-well .form-box .span5 {float:left; width:10%; margin-right:8px}
+.fc-become-guide .btn-container {padding:0 0 40px; text-align:center}
+.fc-become-guide .btn-container .b-g-btn {display:inline-block}
+.fc-become-guide .btn-container .next {width:217px; background-position:0 -120px; height:60px}
+.fc-become-guide .btn-container .prev {width:97px; height:60px; background-position:0 -180px; margin-right:6px}
+.fc-become-guide .btn-container .submit {width:217px; background-position:0 -240px; height:60px}
+.fc-become-guide .btn-container .gomain {width:217px; background-position:0 -300px; height:60px}
+.form-well i.arrow {
+	float:left;
+	width:10px; height:36px; margin:0 8px 0 0;
+	background:url(http://f1.myrealtrip.com/assets/bullet_arrow-9ad2f6f87fccac6d3f7dd7c3c29b08aa.png) no-repeat left center
+}
+.form-well .add-course {float:right}
+.form-well .plus-btn {
+	float:left;
+	width:13px; height:13px; margin:8px 8px 0 0; padding:3px;
+	background:url(http://f3.myrealtrip.com/assets/bullet_plus-080771387a0d65b0bd7c989a8f1388e8.png) no-repeat center center;
+	border:1px solid transparent
+}
+.form-well .plus-btn:hover {border:1px solid #bacfe0; background-color:#fff}
+.form-well .location-box {
+	width:470px; height:200px; overflow:hidden;
+	border-radius:4px; box-shadow:inset 0 1px 3px rgba(0,0,0,0.5);
+	border:1px solid #ccc
+}
+.form-well .price-select {float:left; line-height:32px; margin-right:5px}
+.form-well .thumbnail-con {
+	float:left;
+	width:128px; height:128px;
+	border:1px solid #bacfe0; box-shadow:0 1px 2px #bacfe0;
+	margin:0 8px 8px 0
+}
+.form-well .upload-btn {margin:0 0 0 10px}
+.fc-become-guide .end-comment {
+	color:#8ba9c0; font-size:14px; text-align:center; line-height:150%;
+	padding:40px 0 0
+}
+.fc-become-guide .guide-email {
+	display:inline-block;
+	margin:30px 0 60px; padding:6px 12px;
+	border-radius:4px; background:#e4eff8;
+	color:#3e6f96; font-size:14px; font-weight:bolder; text-align:center;
+	font-family:Helvetica, sans-serif
+}
+.full-content.fc-about {position:relative; top:70px; margin-top:0; margin-bottom:130px}
+.fc-about .about-header {height:330px; position:relative}
+.fc-about .about-header .ah-1-text {position:absolute; top:86px; left:110px}
+.about-content {padding:50px 40px 30px 215px; position:relative}
+.about-content .sticky-wrapper {position:absolute; left:17px; top:50px}
+.about-content .about-navi {position:relative; width:150px; height:200px}
+.about-content .about-navi li a {
+	display:block;
+	width:150px; height:40px;
+	text-indent:-9999px;
+	background:url(http://f2.myrealtrip.com/assets/about_sprites-a3ee653defd949d284d9a3cf80c5291f.png) no-repeat
+}
+.about-content .about-navi li.an-1 a {background-position:0 -560px}
+.about-content .about-navi li.an-2 a {background-position:0 -600px}
+.about-content .about-navi li.an-3 a {background-position:0 -640px}
+.about-content .about-navi li.an-4 a {background-position:0 -680px}
+.about-content .about-navi li.an-5 a {background-position:0 -720px}
+.about-content .about-navi li.an-1.selected a {background-position:-200px -560px}
+.about-content .about-navi li.an-2.selected a {background-position:-200px -600px}
+.about-content .about-navi li.an-3.selected a {background-position:-200px -640px}
+.about-content .about-navi li.an-4.selected a {background-position:-200px -680px}
+.about-content .about-navi li.an-5.selected a {background-position:-200px -720px}
+.about-content .about-desc-1 {padding:24px 0; color:#666; font-size:13px; line-height:22px}
+.about-content .about-title {
+	background:url(http://f2.myrealtrip.com/assets/about_sprites-a3ee653defd949d284d9a3cf80c5291f.png) no-repeat;
+	text-indent:-9999px
+}
+.about-content .at-1 {width:570px; background-position:0 0; height:62px}
+.about-content .at-1-1 {background-position:-650px 0; height:20px}
+.about-content .at-1-2 {background-position:-650px -20px; height:20px}
+.about-content .at-1-3 {background-position:-650px -40px; height:20px}
+.about-content .about-box-1-1 {
+	margin:10px 0 0 -40px; padding:30px 0 40px 235px;
+	background:url(http://f1.myrealtrip.com/assets/about_img_1_1-9ee6c0137cb4b5e92435c430aaff99c8.png) no-repeat
+}
+.about-content .about-box-1-2 {
+	margin:0 -10px 0 0; padding:30px 0 30px 90px;
+	background:url(http://f3.myrealtrip.com/assets/about_img_1_2-a48051bcf14a61eb0f138f6ac0b5c66d.png) no-repeat right top
+}
+.about-content .testimonials {padding:30px 0}
+.about-content .testimonials p {color:#4a7c9d; font-size:13px; font-weight:bolder; line-height:22px}
+.about-content .testimonials div.talker {
+	display:block; position:absolute; bottom:0;
+	padding-top:10px;
+	color:#a1bed1; line-height:150%;
+	left:20px
+}
+.about-content .testimonials div.talker strong {font-weight:bolder; font-size:13px}
+.about-content .testimonials li {position:relative; padding-bottom:40px; margin-bottom:20px}
+.about-content .testimonials .tm-left {float:left; margin-left:120px}
+.about-content .testimonials .tm-photo {display:none}
+.about-content .testimonials .tm-left .tm-photo {float:left; margin-right:20px}
+.about-content .testimonials .tm-photo img {border-radius:5px}
+.about-content .testimonials .tm-photo strong {
+	display:block;
+	color:#555; font-weight:bolder; text-align:center;
+	padding-top:10px
+}
+.about-content .testimonials .tm-photo span {
+	display:block;
+	padding-top:2px;
+	color:#aaa; text-align:center;
+	font-size:11px
+}
+.about-content .testimonials .tm-text {
+	width:360px;
+	background:url(http://f2.myrealtrip.com/assets/about_bg_testimonal-b893f9f66e6bbfee03b08fb2747684c7.png) no-repeat left bottom;
+	padding-bottom:12px
+}
+.about-content .testimonials .tm-text .tmt-wrap {
+	background:url(http://f2.myrealtrip.com/assets/about_bg_testimonal-b893f9f66e6bbfee03b08fb2747684c7.png) no-repeat left top
+}
+.about-content .testimonials .tm-left .tm-text {float:left}
+.about-content .testimonials .tm-left .tm-text .tmt-wrap {padding:28px 34px 25px 38px}
+.about-content .testimonials .tm-right {float:right; margin-right:120px}
+.about-content .testimonials .tm-right .tm-photo {float:right; margin-left:20px}
+.about-content .testimonials .tm-right .tm-text {float:right}
+.about-content .testimonials .tm-right .tm-text .tmt-wrap {padding:28px 44px 25px 34px}
+.about-content .testimonials .tm-right div.talker {left:20px}
+.about-content .gomain {
+	width:326px; margin:30px auto;
+	background:url(http://f2.myrealtrip.com/assets/about_sprites-a3ee653defd949d284d9a3cf80c5291f.png) no-repeat 0 -500px;
+	height:60px
+}
+.about-content .about-box-2-1 {
+	margin-top:-15px;
+	background:url(http://f2.myrealtrip.com/assets/about_img_2_1-ba9cecad9613d77ce235676d28de4b56.png) no-repeat 600px 0;
+	padding-top:15px
+}
+.about-content .at-2 {width:376px; background-position:0 -100px; height:55px}
+.about-content .at-2-1 {background-position:-650px -100px; height:20px}
+.about-content .at-2-2 {background-position:-650px -120px; height:20px}
+.about-content .founders {padding:30px 50px 50px}
+.about-content .founders li {padding:20px 0}
+.about-content .founders .first {border-bottom:1px solid #ddd}
+.about-content .founders .founder-photo {float:left; margin-right:20px}
+.about-content .founders .founder-introduce {float:left; width:470px}
+.about-content .founders .founder-introduce strong {
+	display:block;
+	padding-bottom:14px;
+	color:#0579cb; font-size:20px; font-weight:bolder;
+	letter-spacing:-1px
+}
+.about-content .founders .founder-introduce .founder-desc {padding:0}
+.about-content .top-border-box {border-top:2px solid #0579cb; padding:20px 0}
+.about-content .top-border-box .left-img-box {float:left; min-width:100px; padding:24px 24px 24px 0}
+.about-content .top-border-box .left-img-box .recruit-img {margin-left:25px}
+.about-content .top-border-box .recruit-btn {float:right; margin-left:20px}
+.about-content .at-3 {width:174px; background-position:0 -200px; height:48px}
+.about-content .about-box-3-1 {
+	margin-top:-15px; padding-top:15px;
+	background:url(http://f0.myrealtrip.com/assets/about_img_3_1-2ed508036a52979fcf0ce9d2fef9e27f.png) no-repeat 540px 0
+}
+.about-content .press-box {margin-top:-10px}
+.about-content .press-box li {border-bottom:1px solid #ccc; padding:20px 0}
+.about-content .press-box .press-img-box {float:left; width:155px}
+.about-content .press-box .press-img-box dfn {
+	display:block;
+	padding-top:10px;
+	color:#ccc; font-size:14px;
+	font-weight:bolder
+}
+.about-content .press-box .article-box {float:left; width:510px}
+.about-content .press-box .article-box .article-title {
+	color:#0579cb; font-size:16px; font-weight:bolder;
+	letter-spacing:-1px;line-height:140%
+}
+.about-content .press-box .article-box .article-title:hover {color:#00497c}
+.about-content .press-box .article-box .article-title .date {
+	padding-left:4px;
+	color:#ccc; font-size:11px; font-family:Tahoma, sans-serif;
+	letter-spacing:0
+}
+.about-content .press-box .article-box .article-text {
+	height:60px; padding-top:10px;
+	color:#666; font-size:12px; line-height:20px;
+	overflow:hidden
+}
+.about-content .at-4 {width:280px; background-position:0 -300px; height:48px}
+.about-content .about-box-4-1 {
+	margin-top:-15px; padding-top:15px;
+	background:url(http://f2.myrealtrip.com/assets/about_img_4_1-a6be3ab8dc3bf0eb247f27087aff53dd.png) no-repeat 540px 0;
+	min-height:120px
+}
+.about-content .at-4-1 {background-position:-650px -300px; height:20px}
+.about-content .at-4-2 {background-position:-650px -320px; height:20px}
+.about-content .at-4-3 {background-position:-650px -340px; height:20px}
+.about-content .faq-categories {margin:25px 0 0 -10px}
+.about-content .faq-categories li {float:left; border-right:1px solid #ddd}
+.about-content .faq-categories li a {
+	float:left;
+	padding:0 10px;
+	color:#888; font-size:13px;
+	letter-spacing:-1px
+}
+.about-content .faq-categories li:last-child {border:0 none}
+.about-content .faq-categories li.selected a,.about-content .faq-categories li a:hover {color:#000; font-weight:bolder}
+.about-content .qna-box {padding:20px 0}
+.about-content .qna-box dl {border-bottom:1px solid #ddd; padding:18px 0}
+.about-content .qna-box dl:last-child {border:0 none}
+.about-content .qna-box dt,.about-content .qna-box dd {position:relative; padding-left:55px}
+.about-content .qna-box dt {color:#0579cb; font-size:14px; padding-bottom:14px}
+.about-content .qna-box dd {font-size:12px; line-height:150%; color:#666}
+.about-content .qna-box dl i {
+	position:absolute; left:0;
+	width:18px; height:20px;
+	background:url(http://f2.myrealtrip.com/assets/about_sprites-a3ee653defd949d284d9a3cf80c5291f.png) no-repeat;
+	top:0
+}
+.about-content .qna-box dl dt i {background-position:-650px -360px}
+.about-content .qna-box dl dd i {background-position:-650px -380px}
+.about-content .at-5 {width:135px; background-position:0 -400px; height:48px}
+.about-content .about-box-5-1 {
+	margin-top:-15px; padding-top:15px;
+	background:url(http://f2.myrealtrip.com/assets/about_img_5_1-d5aac7579e5f2f275bdc4991e51fba1d.png) no-repeat 540px 0
+}
+.about-content .at-5-1 {background-position:-650px -400px; height:20px}
+.about-content .at-5-2 {background-position:-650px -420px; height:20px}
+.about-content .contact-box {padding:20px 0}
+.about-content .contact-box dl {padding:8px 0; font-size:13px; border-bottom:1px solid #eee}
+.about-content .contact-box dl dt {float:left; width:100px; color:#000; font-weight:bolder}
+.about-content .contact-box dl dd {color:#555}
+.about-content .contact-box a {
+	display:inline-block;
+	padding-right:16px;
+	background:url(http://f0.myrealtrip.com/assets/bullet_link_arrow-a30b2456ad3f27338de023cf87aecb84.png) no-repeat right center;
+	color:#0579cd;
+	font-family:"Lucida Grande", Helvetica, sans-serif
+}
+.about-content .contact-box a:hover {color:#00497c}
+.about-content .email-form {margin:30px 0; border:0 none; width:auto}
