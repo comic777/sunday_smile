@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cafe</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet"  href="jquery_1.2.0/css/jquery.mobile-1.2.0.css" />
+		<script src="jquery_1.2.0/jquery.js"></script>
+		<script src="jquery_1.2.0/jquery.mobile-1.2.0.js"></script>
+		
+
+		<script type="text/javascript">
+				
+		$(document).delegate('.ui-navbar ul li > a', 'click', function () {
+			$(this).closest('.ui-navbar').find('a').removeClass('ui-navbar-btn-active');
+			$(this).addClass('ui-navbar-btn-active');
+			$('#' + $(this).attr('data-href')).show().siblings('.content_div').hide();
+})
+		
+		
+		function initPage(){
+                        $('.content_div').hide();
+                        var id = $("#Featured-nav").attr('data-href')
+                        $("#"+id).show();
+                }
+		
+		
+		
+		
+		
+					
+			
+		</script>
+		
+		
+				
+		<style type="text/css">
+		
+		
+		.nav-icon .ui-btn .ui-btn-inner { 
+				padding-top: 40px;
+			}
+
+		.nav-icon .ui-btn .ui-icon { 
+			width: 30px; 
+			height: 30px; 
+			margin-left: -15px; 
+			box-shadow: none; 
+			-moz-box-shadow: none; 
+			-webkit-box-shadow: none; 
+			-webkit-border-radius: 0; 
+			border-radius: 0; 
+		}
+		
+		
+		
+		#Featured-nav .ui-icon {
+			background: url(icon/11-clock.png) 50% 50% no-repeat; background-size: 24px 24px
+		}
+		
+		
+		#Host-nav .ui-icon {
+			background: url(icon/18-envelope.png) 50% 50% no-repeat; background-size: 24px 18px
+			}
+		
+		#Search-nav .ui-icon {
+			background: url(icon/06-magnify.png) 50% 50% no-repeat; background-size: 24px 24px
+			}
+
+			
+		#Coffee-nav .ui-icon {
+			background: url(icon/34-coffee.png) 50% 50% no-repeat; background-size: 24px 22px
+			}
+			
+		#User-nav .ui-icon {
+			background: url(icon/111-user.png) 50% 50% no-repeat; background-size: 24px 24px
+			}	
+
+
+		</style>
+	
+	</head>
+	
+	<body onload="initPage();" >
+		<div data-role="page" data-theme="b">
+			
+				
+				
+				
+				
+
+				
+				
+				<!-- 	Featured_tab	-->
+			 	<div id="Featured_tab" class="content_div">
+				 	
+				 	<div data-role="header">
+						 	<h1>Featured </h1>
+					</div>
+				 	
+				 	<div data-role="content" style="padding: 0 0 0 0;">
+					 	<table>
+					 		<tr>
+					 		<td>
+					 		 <div style="background:url('image/1.png'); width:300px ;height:180px;text-align:center\"><div style=\"padding: 155px 0px 2px 180px;\"><font color=white>1</font></div></div>
+					 		</td> 
+					 		</tr>
+					 	</table>
+					</div>
+				 	
+				 	
+				 	
+			 	</div>			 	
+			 	
+			 	<!-- 	Coffee_tab	-->
+			 	<div id="Coffee_tab" class="content_div">
+				 	
+				 	<div data-role="header">
+						 	<h1>Coffee </h1>
+					</div>
+				 	
+				 	<div data-role="content">
+					 	<p>Coffee  </p>
+					</div>
+				 	
+				 	
+				 	
+			 	</div>
+				
+				
+				
+				<!-- 	Search_tab	-->
+				<div id="Search_tab" class="content_div">Content C</div>
+				
+				<!-- 	Host_tab	-->				
+				<div id="Host_tab" class="content_div">Content D</div>
+				
+				
+				
+				<!-- 	User_tab	-->				
+				<div id="User_tab" class="content_div">Content E</div>
+
+
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<div data-role="footer" data-position="fixed">
+				<div data-role="navbar" class="nav-icon">
+				     	<ul>
+					     <li><a href="#" id="Featured-nav"  data-icon="custom" data-href="Featured_tab" class="ui-btn-active">Featured</a></li>
+					     <li><a href="#" id="Coffee-nav" 	data-icon="custom" data-href="Coffee_tab">Coffee</a></li>
+					     <li><a href="#" id="Search-nav" 	data-icon="custom" data-href="Search_tab">Search</a></li>
+					     <li><a href="#" id="Host-nav" 		data-icon="custom" data-href="Host_tab">Host</a></li>
+					     <li><a href="#" id="User-nav" 		data-icon="custom" data-href="User_tab">User</a></li>
+				        </ul>
+				        </div>
+				    </div>
+			</div>
+			
+
+	
+​		
+		
+		
+		
+	
+		
+		
+		
+	</body>
+
+
+</html>
