@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>New Coffee</title>
+<style type="text/css" media="screen">@import "jqtouch/jqtouch.css";</style>
+<style type="text/css" media="screen">@import "themes/jqt/theme.css";</style>
+<style type="text/css" media="screen">@import "extensions/jqt.bars/jqt.bars.css";</style>
+<style type="text/css" media="screen">@import "extensions/jqt.bars/apple/jqt/theme.css";</style>
+<script src="jqtouch/jquery-1.7.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="jqtouch/jqtouch.js" type="application/x-javascript" charset="utf-8"></script>
+<script src="extensions/jqt.bars/jqt.bars.js" type="application/x-javascript" charset="utf-8"></script>
+<style type="text/css" media="screen">
+
+
+</style>
+<script type="text/javascript" charset="utf-8">
+var jQT = new $.jQTouch({
+  icon:'jqtouch.png',
+  addGlossToIcon:false,
+  slideSelector: '#jqt ul > li > a, #jqt ol > li > a',
+  startupScreen:'jqt_startup.png',
+  statusBar:'black',
+  preloadImages:[
+    '../../themes/jqt/img/back_button.png',
+    '../../themes/jqt/img/back_button_clicked.png',
+    '../../themes/jqt/img/button_clicked.png',
+    '../../themes/jqt/img/grayButton.png',
+    '../../themes/jqt/img/whiteButton.png',
+    '../../themes/jqt/img/loading.gif',
+    'icon/11-clock.png',
+    'icon/34-coffee.png',
+    'icon/18-envelope.png',
+    'icon/06-magnify.png',
+    'icon/111-user.png',
+    
+  ],
+  useFastTouch: true
+});
+// Some sample Javascript functions:
+$(function(){
+// Show a swipe event on swipe test
+  $('#swipeme').swipe(function(evt, data){
+    $(this).html('You swiped <strong>' + data.direction + '/' + data.deltaX + ':' + data.deltaY + '</strong>!');
+    $(this).parent().after('<li>swiped!</li>')
+//iScroll integration
+    jQT.setPageHeight();
+  });
+  $('#tapme').tap(function(){
+    $(this).parent().after('<li>tapped!</li>');
+//iScroll integration
+    jQT.setPageHeight();
+  })
+  $('a[target="_blank"]').click(function(){
+    if(confirm('This link opens in a new window.')){
+      return true;
+    } else {
+      return false;
+    }
+  });
+// Page animation callback events
+  $('#pageevents').
+  bind('pageAnimationStart', function(e, info){
+    $(this).find('.info').append('Started animating ' + info.direction + '&hellip; ');
+  }).
+  bind('pageAnimationEnd', function(e, info){
+    $(this).find('.info').append(' finished animating ' + info.direction + '.<br /><br />');
+  });
+// Page animations end with AJAX callback event, example 1 (load remote HTML only first time)
+  $('#callback').bind('pageAnimationEnd', function(e, info){
+// Make sure the data hasn't already been loaded (we'll set 'loaded' to true a couple lines further down)
+    if(!$(this).data('loaded')){
+// Append a placeholder in case the remote HTML takes its sweet time making it back
+// Then, overwrite the "Loading" placeholder text with the remote HTML
+      $(this).append($('<div>Loading</div>').load('ajax.html .info', function(){
+// Set the 'loaded' var to true so we know not to reload
+// the HTML next time the #callback div animation ends
+        $(this).parent().data('loaded', true);
+      }));
+    }
+  });
+
+  
+});
+
+</script>
+</head>
+<body>
+
+<!-- tabbar -->
+<div id="tabbar">
+  <div id="tabbar-pane">
+    <ul>
+      <li>
+        <a href="#Featured" mask="icon/11-clock.png">
+          <strong>Featured</strong>
+        </a>
+      </li>
+      <li>
+        <a href="#Coffee" mask="icon/34-coffee.png">
+          <strong>Coffee</strong>
+        </a>
+      </li>
+      <li>
+        <a href="#Search" mask="icon/06-magnify.png">
+          <strong>Search</strong>
+        </a>
+      </li>
+      <li>
+        <a href="#Host" mask="icon/18-envelope.png">
+          <strong>Host</strong>
+        </a>
+      </li>
+      <li>
+        <a href="#Account" mask="icon/111-user.png">
+          <strong>Account</strong>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- start!! -->
+
+
+<div id="jqt">
+<!-- Featured -->
+  <div id="Featured" class="s-pane current">
+    <div class="toolbar">
+        	<h1>Featured</h1>
+        </div>
+    <div id="Featured-wrapper" class="s-scrollwrapper">
+      <div id="Featured-pane" class="s-scrollpane">
+       
+        
+        <p>		Featured page	</p>
+
+        
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+<!-- Coffee -->
+  <div id="Coffee" class="s-pane selectable">
+    <div class="toolbar">
+      <h1>Coffee</h1>
+    </div>
+    <div id="ui-wrapper" class="s-scrollwrapper">
+      <div id="ui-pane" class="s-scrollpane">
+        
+        
+	      	<!--  Coffee       -->
+        
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+<!-- Search -->
+  <div id="Search" class="s-pane">
+    <div class="toolbar">
+      <h1>Search</h1>
+    </div>
+    <div id="Search-wrapper" class="s-scrollwrapper">
+      <div id="Search-pane" class="s-scrollpane">
+	      
+	      
+	      <!-- 	Search       -->
+	      
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+<!-- Host -->
+  <div id="Host" class="s-pane">
+    <div class="toolbar">
+      <h1>Host</h1>
+    </div>
+    <div id="Host-wrapper" class="s-scrollwrapper">
+      <div id="Host-pane" class="s-scrollpane">
+       
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!-- Account -->
+  <div id="Account" class="s-pane">
+    <div class="toolbar">
+      <h1>Account</h1>
+    </div>
+    <div id="Account-wrapper" class="s-scrollwrapper">
+      <div id="Account-pane" class="s-scrollpane">
+      
+      
+      
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</body>
+</html>
