@@ -110,26 +110,25 @@ $(function(){
 <script type="text/javascript">
 	$.ajax({
 			type:"POST",
-			url: "http://203.237.178.19/~cafe/db_cafe_main.jsp",
+			url: "http://203.228.244.108/db_cafe_main.jsp",
 			dataType: 'json',
 			success: function(result) {
 			   var obj = result.data;
 			   var htmlTag = "";
-			   kk = "http://203.237.178.19/~cafe/web/cafebnb_web/WebContent/resources/cafe/";
+			   var kk = "http://203.237.178.19/~cafe/web/cafebnb_web/WebContent/resources/cafe/";
+			   htmlTag += "<table>";
 			   for(i=0; i<obj.length; i++){
 				   var cafe = obj[i];
-
-/* 				   alert(cafe.seq + "/" + cafe.name + "/" + cafe.pictures); */
-				   //alert(cafe.name);
-				   $("#aaa").append('<table>' + '<tr>' + '<td>' + '<a href="#detail">' +' <div class="img">'  + '<div class="font1">' + '<font color=white size=2px>' +obj[i].name + '</font>' + '</div>' + '</div>' +'</td>'+'</a>' + '</tr>' +'</table>');
+				   var imgUrl = kk+"/"+cafe.pictures;
+				   htmlTag += "<tr><td><a href=\"#detail\">";
+				   htmlTag += "<div style=\"background:url('"+imgUrl+"'); width:300px ;height:180px;text-align:center\">";
+				   htmlTag += "<div style=\"padding: 155px 0px 2px 180px;\"><font color=white size=2px>"+cafe.name;
+				   htmlTag += "</font></div></div>";
+				   htmlTag += "</a></td></tr>";
 			   }	
-/* 			   alert(obj[1].pictures); */
-			   
-			   
-			  /*  $("#aaa").append('<table>' + '<tr>' + '<td>' + ' <div class="img">' + '<div class="font1">' + '<font color=white size=2px>' +obj[0].name + '</font>' + '</div>' + '</div>' +'</td>'+ '</tr>' +'</table>'); */
+			   htmlTag += "</table>";
+			   $("#aaa").append(htmlTag);
 
-			
-			
 			}
 			});
 
@@ -198,40 +197,7 @@ $(function(){
                    <div data-role="content" style="padding: 0 0 0 0;">
                    
                         <div id="aaa"></div>
-                   
-					 	<table>
-					 		<tr>
-					 		<td>
-					 		 <a href="#detail">
-					 		 <div style="background:url('image/cafe1.png'); width:300px ;height:180px;text-align:center\"><div style="padding: 155px 0px 2px 180px;\"><font color=white size=2px>coffee container</font></div></div>
-					 		</a>
-					 		 </td> 
-					 		</tr>
-					 	</table>
-					 	
-					 	<table>
-					 		<tr>
-					 		<td>
-					 		<a href="#">
-					 		 <div style="background:url('image/cafe2.png'); width:300px ;height:180px;text-align:center\"><div style="padding: 155px 0px 2px 180px;\"><font color=white size=2px>coffee container</font></div></div>
-					 		</a>
-					 		</td> 
-					 		</tr>
-					 	</table>
-					 	
-					 	<table>
-					 		<tr>
-					 		<td>
-					 		 <div style="background:url('image/3.png'); width:300px ;height:180px;text-align:center\"><div style="padding: 155px 0px 2px 180px;\"><font color=white>coffee container</font></div></div>
-					 		</td> 
-					 		</tr>
-					 	</table>
-					 	
-										 	
-										 	
-					 	
-					 	
-					</div>
+                   </div>
           
           
         
