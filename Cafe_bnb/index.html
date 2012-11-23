@@ -4,9 +4,9 @@
 <meta charset="UTF-8" />
 <title>Cafe bnb</title>
 <style type="text/css" media="screen">@import "jqtouch/jqtouch.css";</style>
-<style type="text/css" media="screen">@import "themes/jqt/theme.css";</style>
+<style type="text/css" media="screen">@import "themes/apple/theme.css";</style>
 <style type="text/css" media="screen">@import "extensions/jqt.bars/jqt.bars.css";</style>
-<style type="text/css" media="screen">@import "extensions/jqt.bars/themes/jqt/theme.css";</style>
+<style type="text/css" media="screen">@import "extensions/jqt.bars/themes/apple/theme.css";</style>
 <style type="text/css" media="screen">@import "extensions/jqt.listIndex/jqt.listIndex.css";</style>
 <style type="text/css" media="screen">@import "jqtouch/css/jquery.mobile-1.2.0.css";</style>
 
@@ -16,12 +16,13 @@
 <script src="extensions/jqt.autotitles.js" type="application/x-javascript" charset="utf-8"></script>
 <script src="extensions/jqt.bars/jqt.bars.js" type="application/x-javascript" charset="utf-8"></script>
 <script src="extensions/jqt.listIndex/jqt.listIndex.js" type="application/x-javascript" charset="utf-8"></script>
-<style type="text/css" media="screen">
-#jqt.fullscreen #ui .info,
-#jqt.fullscreen #plastic .info {
-  display:none;
-}
+
+<style type="text/css">
+	a {color:#000; text-decoration:none}
+/* 	//+ '<img style="width: 300px; height: 180px" src=\"' + kk + obj[i].pictures + '">' */
 </style>
+
+
 <script type="text/javascript" charset="utf-8">
 var jQT = new $.jQTouch({
   icon: 'jqtouch.png',
@@ -31,17 +32,6 @@ var jQT = new $.jQTouch({
   startupScreen: 'jqt_startup.png',
   statusBar: 'black',
   preloadImages: [
-    '../../themes/jqt/img/activeButton.png',	 	
-    '../../themes/jqt/img/back_button.png',
-    '../../themes/jqt/img/back_button_clicked.png',
-    '../../themes/jqt/img/blueButton.png',
-    '../../themes/jqt/img/button.png',
-    '../../themes/jqt/img/button_clicked.png',
-    '../../themes/jqt/img/grayButton.png',
-    '../../themes/jqt/img/greenButton.png',
-    '../../themes/jqt/img/redButton.png',
-    '../../themes/jqt/img/whiteButton.png',
-    '../../themes/jqt/img/loading.gif',
     
     'icon/11-clock.png',
     'icon/34-coffee.png',
@@ -105,6 +95,49 @@ $(function(){
 
 </script>
 
+	<style type="text/css">
+		.img {
+			background:url("image/cafe1.png");
+			background-size: 300px 180px;
+			
+		}
+		.font1 {
+			padding: 155px 68px 2px 180px;
+			
+		}
+	</style>
+<!-- ajax -->
+<script type="text/javascript">
+	$.ajax({
+			type:"POST",
+			url: "http://203.237.178.19/~cafe/db_cafe_main.jsp",
+			dataType: 'json',
+			success: function(result) {
+			   var obj = result.data;
+			   var htmlTag = "";
+			   kk = "http://203.237.178.19/~cafe/web/cafebnb_web/WebContent/resources/cafe/";
+			   for(i=0; i<obj.length; i++){
+				   var cafe = obj[i];
+
+/* 				   alert(cafe.seq + "/" + cafe.name + "/" + cafe.pictures); */
+				   //alert(cafe.name);
+				   $("#aaa").append('<table>' + '<tr>' + '<td>' + '<a href="#detail">' +' <div class="img">'  + '<div class="font1">' + '<font color=white size=2px>' +obj[i].name + '</font>' + '</div>' + '</div>' +'</td>'+'</a>' + '</tr>' +'</table>');
+			   }	
+/* 			   alert(obj[1].pictures); */
+			   
+			   
+			  /*  $("#aaa").append('<table>' + '<tr>' + '<td>' + ' <div class="img">' + '<div class="font1">' + '<font color=white size=2px>' +obj[0].name + '</font>' + '</div>' + '</div>' +'</td>'+ '</tr>' +'</table>'); */
+
+			
+			
+			}
+			});
+
+ 
+		
+</script>
+
+
 
 
 </head>
@@ -132,7 +165,7 @@ $(function(){
         </a>
       </li>
       <li>
-        <!-- Navigation to an AJAX loaded page -->
+        <!-- Host Tab -->
         <a href="#Host" mask="icon/18-envelope.png" mask2x="icon/18-envelope.png">
           <strong>Host</strong>
         </a>
@@ -160,9 +193,12 @@ $(function(){
     <div class="s-scrollwrapper">
       <div>
         
-        
+
              
                    <div data-role="content" style="padding: 0 0 0 0;">
+                   
+                        <div id="aaa"></div>
+                   
 					 	<table>
 					 		<tr>
 					 		<td>
@@ -191,22 +227,8 @@ $(function(){
 					 		</tr>
 					 	</table>
 					 	
-					 	
-					 	<table>
-					 		<tr>
-					 		<td>
-					 		 <div style="background:url('image/1.png'); width:300px ;height:180px;text-align:center\"><div style="padding: 155px 0px 2px 180px;\"><font color=white>coffee container</font></div></div>
-					 		</td> 
-					 		</tr>
-					 	</table>
-					 	
-					 	<table>
-					 		<tr>
-					 		<td>
-					 		 <div style="background:url('image/1.png'); width:300px ;height:180px;text-align:center\"><div style="padding: 155px 0px 2px 180px;\"><font color=white>coffee container</font></div></div>
-					 		</td> 
-					 		</tr>
-					 	</table>
+										 	
+										 	
 					 	
 					 	
 					</div>
@@ -222,7 +244,7 @@ $(function(){
 <!-- Featured detail -->
 	<div id="detail">
     	<div class="toolbar">
-	    	<h1>Caffee</h1>
+	    	<h1>Featured detail</h1>
 	    	<a class="back" href="#">Back</a>
 	    </div>
 	    <div class="s-scrollwrapper">
@@ -231,18 +253,17 @@ $(function(){
 	    <div data-role="content">
 	    	
 	    	<a href="#page1">
-            <div style="width: 300px; height: 200px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;">
-                <img src="http://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
-            </div>
+            <div style=" text-align:left">
+                <img style="width: 288px; height: 150px" src="http://203.237.178.19/~cafe/web/cafebnb_web/WebContent/resources/cafe/0000002/offer_36_01.jpg">            </div>
         </a>
 	    
  	    
 	    <a href="#" data-role="button" data-inline="true" data-mini="true" style="width:140px">Book It</a>
 			<a href="#" data-role="button" data-theme="b" data-inline="true" data-mini="true" style="width:140px">Contact Host</a>
 			
-		<div>
-		<ul data-role="listview" data-divider-theme="c" data-inset="true" data-mini="true" style="width:300px">
-            <li data-role="list-divider" role="heading">
+			
+		<ul data-role="listview" data-divider-theme="c" data-inset="true" style="width:300px; padding: 0 0 0 0;">
+            <li data-role="list-divider">
                <a href="#" >
                 Description
                </a>
@@ -252,19 +273,19 @@ $(function(){
                     aaaa
 
             </li>
-            <li data-role="list-divider" role="heading">
+            <li data-role="list-divider" >
 	            <a href="#" >
                 Property Details
 	            </a>
             </li>
-            <li data-role="list-divider" role="heading">
+            <li data-role="list-divider">
                 <a href="#" >
                 Amenities
                 </a>
             </li>
         </ul>
 		
-		</div>
+		
 		
 		<ul data-role="listview" data-divider-theme="c" data-inset="true" data-mini="true" style="width:300px">
             <li data-role="list-divider" role="heading">
@@ -335,7 +356,7 @@ $(function(){
 
 
 
-<!-- Animations -->
+<!-- Search -->
   <div id="Search">
     <div class="toolbar">
       <h1>Search</h1>
