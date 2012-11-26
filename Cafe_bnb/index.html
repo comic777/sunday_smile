@@ -1,3 +1,591 @@
+<<<<<<< HEAD
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Cafe bnb</title>
+<style type="text/css" media="screen">@import "jqtouch/jqtouch.css";</style>
+<style type="text/css" media="screen">@import "themes/apple/theme.css";</style>
+<style type="text/css" media="screen">@import "extensions/jqt.bars/jqt.bars.css";</style>
+<style type="text/css" media="screen">@import "extensions/jqt.bars/themes/apple/theme.css";</style>
+<style type="text/css" media="screen">@import "extensions/jqt.listIndex/jqt.listIndex.css";</style>
+<style type="text/css" media="screen">@import "jqtouch/css/jquery.mobile-1.2.0.css";</style>
+
+<script src="jqtouch/jquery-1.7.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="jqtouch/jquery.mobile-1.2.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="jqtouch/jqtouch.js" type="application/x-javascript" charset="utf-8"></script>
+<script src="extensions/jqt.autotitles.js" type="application/x-javascript" charset="utf-8"></script>
+<script src="extensions/jqt.bars/jqt.bars.js" type="application/x-javascript" charset="utf-8"></script>
+<script src="extensions/jqt.listIndex/jqt.listIndex.js" type="application/x-javascript" charset="utf-8"></script>
+
+<style type="text/css">
+	a {color:#000; text-decoration:none}
+/* 	//+ '<img style="width: 300px; height: 180px" src=\"' + kk + obj[i].pictures + '">' */
+
+
+
+
+</style>
+
+
+<script type="text/javascript" charset="utf-8">
+var jQT = new $.jQTouch({
+  icon: 'jqtouch.png',
+  icon4: 'jqtouch4.png',
+  addGlossToIcon: false,
+  slideleftSelector: '#jqt > ul > li > a, #jqt > ol > li > a',
+  startupScreen: 'jqt_startup.png',
+  statusBar: 'black',
+  preloadImages: [
+    
+    'icon/11-clock.png',
+    'icon/34-coffee.png',
+    'icon/18-envelope.png',
+    'icon/06-magnify.png',
+    'icon/111-user.png',
+  ],
+  useFastTouch: true
+});
+// Some sample Javascript functions:
+$(function(){
+// Show a swipe event on swipe test
+  $('#swipeme').swipe(function(evt, data){
+    $(this).html('You swiped <strong>' + data.direction + '/' + data.deltaX + ':' + data.deltaY + '</strong>!');
+    $(this).parent().after('<li>swiped!</li>')
+//iScroll integration
+    jQT.setPageHeight();
+  });
+  $('#tapme').tap(function(){
+    $(this).parent().after('<li>tapped!</li>');
+//iScroll integration
+    jQT.setPageHeight();
+  })
+  $('a[target="_blank"]').click(function(){
+    if(confirm('This link opens in a new window.')){
+      return true;
+    } else {
+      return false;
+    }
+  });
+  
+  
+// Orientation callback event
+  $('#jqt').bind('turn', function(e, data){
+    $('#orient').html('Orientation: ' + data.orientation);
+  });
+
+
+
+
+});
+
+</script>
+
+	<style type="text/css">
+		.img {
+			background:url("image/cafe1.png");
+			background-size: 300px 180px;
+			
+		}
+		.font1 {
+			padding: 155px 68px 2px 180px;
+			
+		}
+	</style>
+	
+<style type="text/css">
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display:block}
+body {line-height:1}
+ol,ul {list-style:none}
+blockquote,q {quotes:none}
+blockquote:before,blockquote:after,q:before,q:after {content:''; content:none}
+table {border-collapse:collapse; border-spacing:0}
+input,img {vertical-align:middle}
+body,input,textarea {font:12px NanumGothic, "나눔고딕", sans-serif}
+body#main,body#list {
+	background:url(/resources/image/bg_stripes.png) repeat
+}
+::selection {background-color:#2098E4; color:white}
+::-moz-selection {background-color:#2098E4; color:white}
+b,strong {font-weight:bolder}
+a {color:#000; text-decoration:none}
+.clear {clear:both}
+.btn {
+	display:block;
+	outline:none;
+	font-size:1px; text-indent:-9999px;
+	border:0 none
+}
+a.block {display:block; text-decoration:none}
+.clearfix:after {
+	display:block; visibility:hidden; clear:both;
+	content:"."; line-height:0;
+	height:0
+}
+.city-name {
+	padding:6px 12px 6px 26px;
+	border-radius:30px; background:url(icon_city_pin.png) no-repeat 9px 4px;
+	font-weight:bolder; font-family:Helvetica, sans-serif;
+	font-size:12px
+}
+.city-name.cn-black {
+	position:relative; top:-5px;
+	background-color:#000; box-shadow:0 0 0 2px rgba(255,255,255,0.3);
+	color:#fff;
+	background-clip:padding-box
+}
+.city-name.cn-white {border:1px solid #ddd; color:#333; background-color:#fff}
+
+
+/* ============================= */
+
+
+.trip-list {width:320px; margin:3px 0 3px 5px}
+.trip-list li {
+	position:relative; float:left;
+	margin-right:20px;
+	box-shadow:0 1px 3px rgba(0,0,0,0.4);
+	-webkit-transition:box-shadow .3s
+}
+.trip-list li:hover {box-shadow:0 1px 12px rgba(0,0,0,0.7)}
+.trip-list li.last {margin-right:0}
+.tl-2col li {width:310px}
+.tl-4col li {width:0}
+.trip-list .meta-info-area {background:#fff; position:relative}
+.trip-list .image-area {position:relative; overflow:hidden}
+.trip-list .image-area img {width:100%}
+
+/* 사진 싸이즈 */
+.tl-2col .image-area {width:310px; height:180px}
+.tl-2col .meta-info {padding:15px 8px 15px 20px}
+.tl-2col .meta-info .title {
+	width:320px; padding-bottom:6px; overflow:hidden;
+	color:#000; font-size:18px; font-weight:bolder; text-overflow:ellipsis; line-height:20px;
+	letter-spacing:-1px;white-space:nowrap
+}
+.tl-2col .meta-info .desc {
+	width:320px; overflow:hidden;
+	color:#2098e4; font-size:12px; text-overflow:ellipsis; line-height:18px;
+	white-space:nowrap
+}
+
+/* 도시이름 위치 */
+.tl-2col .meta-info-area .city-name {position:absolute; right:10px; top:10px}
+.tl-4col .image-area {width:230px; height:152px}
+.tl-4col .city-name-box {
+	position:absolute; top:0; left:0;
+	width:230px; height:42px; padding-top:112px;
+	text-align:center
+}
+.tl-4col .city-name {display:inline-block; margin:10px}
+.tl-4col .meta-info {padding:10px 0}
+.tl-4col .meta-info .title {
+	overflow:hidden;
+	color:#000; font-size:14px; font-weight:bolder; text-align:center; text-overflow:ellipsis; line-height:20px; white-space:nowrap;
+	letter-spacing:-1px;margin:0 15px
+}
+.guide-info {position:absolute; right:0; bottom:0; margin:0 0 18px; z-index:2}
+.guide-info .photo-box {
+	float:left;
+	border:3px solid #fff; border-radius:64px;
+	color:#fff;
+	box-shadow:inset 0 1px 10px rgba(0,0,0,0.5),0 1px 3px rgba(0,0,0,0.5)
+}
+.guide-info .photo-box img {position:relative; float:left; width:30px; border-radius:64px; z-index:-1}
+/* profile 사진 위치 */
+.guide-info .guide-box {float:left; padding:5px 15px 0 10px; width:220px}
+
+.guide-info .guide-name {
+	margin-bottom:8px;
+	color:#fff; font-size:14px; font-weight:bolder;
+	display:block
+}
+.guide-info .guide-desc {position:absolute; color:#b8b8b8; font-size:12px; display:block}
+
+
+.fader {
+	position:absolute; left:0; bottom:0;
+	width:100%; height:162px;
+	background:url(http://f3.myrealtrip.com/assets/fader_large-c5000ae923f3ee9c006c1f828d58dab3.png) repeat-x;
+	z-index:1
+}
+
+
+
+</style>
+	
+<!-- ajax -->
+<script type="text/javascript">
+	/*
+$.ajax({
+			type:"POST",
+			url: "http://203.237.178.19/~cafe/db_cafe_main.jsp",
+			dataType: 'json',
+			success: function(result) {
+			   var obj = result.data;
+			   var htmlTag = "";
+			   kk = "http://203.237.178.19/~cafe/web/cafebnb_web/WebContent/resources/cafe/";
+			   htmlTag += "<table>";
+			   for(i=0; i<obj.length; i++){
+				   var cafe = obj[i];
+				   var imgUrl = kk+"/"+cafe.pictures;
+				   htmlTag += "<tr><td><a href=\"#detail\">";
+				   htmlTag += "<div style=\"background:url('"+imgUrl+"'); width:310px ;height:180px;text-align:center\">";
+				   htmlTag += "<div style=\"padding: 155px 0px 2px 180px;\"><font color=white size=2px>"+cafe.name;
+				   htmlTag += "</font></div></div>";
+				   htmlTag += "</a></td></tr>";
+			   }	
+			   htmlTag += "</table>";
+			   $("#aaa").append(htmlTag);
+			   
+			   
+			
+			
+			}
+			});
+*/
+	
+	$.ajax({
+			type:"POST",
+			url: "http://203.237.178.19/~cafe/db_cafe_main.jsp",
+			dataType: 'json',
+			success: function(result) {
+			   var obj = result.data;
+			   var htmlTag = "";
+			   kk = "http://203.237.178.19/~cafe/web/cafebnb_web/WebContent/resources/cafe/";
+			   for(i=0; i<obj.length; i++){
+				   var cafe = obj[i];
+				   var imgUrl = kk+"/"+cafe.pictures;
+				  
+				   htmlTag += "<ul class='trip-list tl-2col clearfix'>";
+				   htmlTag += "<li>";
+				   htmlTag += "<a href='#detail' class='block'>"
+				   htmlTag += "<div class='image-area'>";
+				   htmlTag += "<img alt='Medium' src='"+ imgUrl+ "' />";
+				   htmlTag += "<div class='tl-guide-info guide-info'>";
+				   htmlTag += "<div class='photo-box'>";
+				   htmlTag += "<img alt='Guide_profile_s_76' src='http://f1.myrealtrip.com/guide_profiles/guide_profile_s_76.jpg' />";
+				   htmlTag += "</div>";
+				   htmlTag += "<div class='guide-box'>";
+				   htmlTag += "<span class='guide-name'>"+ cafe.name +"</span>";				   				  			   	 	   htmlTag += "<span class='guide-desc'>"+ cafe.address + "</span>";			   				   
+				   htmlTag += "</div>";				   				   				   				   				   
+				   htmlTag += "<div class='meta-info-area'>";				   				   				   	
+				   htmlTag += "<span class='city-name cn-white'>"+ cafe.name + "</span>";				   				   				   				   				   
+				   htmlTag += "</div>";
+				   htmlTag += "</div>";
+				   htmlTag += "<div class='fader'>&nbsp;</div>";
+				   htmlTag += "</div>";
+				   htmlTag += "</a>";
+				   htmlTag += "</li>";				   				   				   				   				   				   htmlTag += "</ul>";	   				   				   				   				   				   				   				   				   				   				   				   
+			   }	
+			   $("#sub1-recommend").append(htmlTag);
+			   
+			   
+			
+			
+			}
+			});
+
+	
+	
+	
+			
+	/*
+		
+		$(document).ready(function () {
+		$('#aaa').click(function () {
+		$.post("http://203.237.178.19/~cafe/db_cafe_main.jsp", { 'KEY' : 'VALUE' },
+			function (result) {
+				$('#detail').html(result);  //뿌릴 DIV ID
+			}
+			);
+			});
+			});
+*/
+
+
+
+ 
+		
+</script>
+
+
+
+
+</head>
+<body>
+
+<!-- tabbar -->
+
+<div id="tabbar">
+	<div>
+    <ul>
+      <li>
+        <!-- Action & navigation -->
+        <a href="#Featured" mask="icon/11-clock.png" mask2x="icon/11-clock.png">
+          <strong>Featured</strong>
+        </a>
+      </li>
+      <li>
+        <a href="#Coffee" mask="icon/34-coffee.png" mask2x="icon/34-coffee.png">
+          <strong>Coffee</strong>
+        </a>
+      </li>
+      <li>
+        <a href="#Search" mask="icon/06-magnify.png" mask2x="icon/06-magnify.png">
+          <strong>Search</strong>
+        </a>
+      </li>
+      <li>
+        <!-- Host Tab -->
+        <a href="#Host" mask="icon/18-envelope.png" mask2x="icon/18-envelope.png">
+          <strong>Host</strong>
+        </a>
+      </li>
+      <li>
+        <a href="#Account" mask="icon/111-user.png" mask2x="icon/111-user.png">
+          <strong>Account</strong>
+        </a>
+      </li>
+     </ul>
+  </div>
+</div>
+
+
+
+
+
+<div id="jqt">
+<!-- Featured -->
+  <div id="Featured" class="current">
+  
+   <div class="toolbar">
+      <h1>Featured</h1>
+    </div>
+    <div class="s-scrollwrapper">
+      <div>
+        
+
+             
+                   <div data-role="content" style="padding: 0 0 0 0;">
+                   
+                        <div id="sub1-recommend"></div>
+                   
+					 	<table>
+					 		<tr>
+					 		<td>
+					 		 <a href="#detail">
+					 		 <div style="background:url('image/cafe1.png'); width:300px ;height:180px;text-align:center\"><div style="padding: 155px 0px 2px 180px;\"><font color=white size=2px>coffee container</font></div></div>
+					 		</a>
+					 		 </td> 
+					 		</tr>
+					 	</table>
+					 	
+					 	<table>
+					 		<tr>
+					 		<td>
+					 		<a href="#">
+					 		 <div style="background:url('image/cafe2.png'); width:300px ;height:180px;text-align:center\"><div style="padding: 155px 0px 2px 180px;\"><font color=white size=2px>coffee container</font></div></div>
+					 		</a>
+					 		</td> 
+					 		</tr>
+					 	</table>
+					 	
+					 	<table>
+					 		<tr>
+					 		<td>
+					 		 <div style="background:url('image/3.png'); width:300px ;height:180px;text-align:center\"><div style="padding: 155px 0px 2px 180px;\"><font color=white>coffee container</font></div></div>
+					 		</td> 
+					 		</tr>
+					 	</table>
+					 	
+										 	
+										 	
+					 	
+					 	
+					</div>
+          
+          
+        
+        
+      </div>
+    </div>
+  </div>
+
+
+<!-- Featured detail -->
+	<div id="detail">
+    	<div class="toolbar">
+	    	<h1>Featured detail</h1>
+	    	<a class="back" href="#">Back</a>
+	    </div>
+	    <div class="s-scrollwrapper">
+	    
+	    
+	    <div data-role="content">
+	    	
+	    	<a href="#page1">
+            <div style=" text-align:left">
+                <img style="width: 288px; height: 150px" src="http://203.237.178.19/~cafe/web/cafebnb_web/WebContent/resources/cafe/0000002/offer_36_01.jpg">            </div>
+        </a>
+	    
+ 	    
+	    <a href="#" data-role="button" data-inline="true" data-mini="true" style="width:140px">Book It</a>
+			<a href="#" data-role="button" data-theme="b" data-inline="true" data-mini="true" style="width:140px">Contact Host</a>
+			
+			
+		<ul data-role="listview" data-divider-theme="c" data-inset="true" style="width:300px; padding: 0 0 0 0;">
+            <li data-role="list-divider">
+               <a href="#" >
+                Description
+               </a>
+            </li>
+            <li data-theme="b">
+
+                    aaaa
+
+            </li>
+            <li data-role="list-divider" >
+	            <a href="#" >
+                Property Details
+	            </a>
+            </li>
+            <li data-role="list-divider">
+                <a href="#" >
+                Amenities
+                </a>
+            </li>
+        </ul>
+		
+		
+		
+		<ul data-role="listview" data-divider-theme="c" data-inset="true" data-mini="true" style="width:300px">
+            <li data-role="list-divider" role="heading">
+               <a href="#" >
+                Location
+               </a>
+            </li>
+            <li data-theme="b">
+            	 <div data-role="content" style="padding: 0 0 0 0;">
+        <img src="https://maps.googleapis.com/maps/api/staticmap?center=Madison, WI&amp;zoom=14&amp;size=288x150&amp;markers=Madison, WI&amp;sensor=false"
+        width="288" height="150">
+    </div>            </li>
+            <li data-role="list-divider" role="heading">
+                <a href="#" >
+	                Seoul Paris, FR
+                </a>
+            </li>
+
+        </ul>
+        
+        <ul data-role="listview" data-divider-theme="c" data-inset="true" data-mini="true" style="width:300px">
+            <li data-role="list-divider" role="heading">
+               <a href="#" >
+                Host
+               </a>
+            </li>
+            <li data-theme="b">
+            	 <div data-role="content" style="padding: 0 0 0 0;">
+        
+	            	 
+            	 </div>            
+            	 </li>
+            
+
+        </ul>
+
+		
+				
+			
+	    </div>    
+	    </div>
+	   </div>
+
+
+
+
+
+
+
+<!-- Coffee -->
+  <div id="Coffee">
+    <div class="toolbar">
+      <h1>Coffee Tab</h1>
+    </div>
+    <div class="s-scrollwrapper" momentum="false" vScrollbar="false">
+      <div>
+        <div class="info">
+          <p>Add this page to your home screen to view the tabbar demo, custom icon, startup screen and full screen mode.</p>
+        </div>
+        
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!-- Search -->
+  <div id="Search">
+    <div class="toolbar">
+      <h1>Search</h1>
+    </div>
+    <div class="s-scrollwrapper">
+      <div>
+        <div class="info"> Custom animations are also <a href="http://code.google.com/p/jqtouch/wiki/Animations" target="_blank">easy to write</a>. <br />
+          View the source in <code>demos/customanimation</code> to see how. </div>
+        
+        
+        
+        
+        
+      </div>
+    </div>
+  </div>
+
+
+
+
+<!-- Host -->
+  <div id="Host">
+    <div class="toolbar">
+      <h1>Host</h1>
+    </div>
+    <div class="s-scrollwrapper">
+      <div>
+      
+      <p>Host</p>
+      
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- Account -->
+  <div id="Account">
+    <div class="toolbar">
+      <h1>Account</h1>
+    </div>
+    <div class="s-scrollwrapper">
+      <div>
+      
+      <p>Account</p>
+      
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</body>
+=======
 <!doctype html>
 <html>
 <head>
@@ -378,4 +966,5 @@ $(function(){
 
 
 </body>
+>>>>>>> branch 'master' of https://github.com/comic777/sunday_smile.git
 </html>
